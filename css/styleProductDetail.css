@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+.detail
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	font-size:24px;
+}
+.ProductProperties
+{
+    color:#99CCFF;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:20px;
+}
+.ProductDescription
+{
+    color:#FFF;
+	font-family:Times New Roman,serif;
+	font-size:18px;
+	
+}
+.CustomerName
+{
+	color:#F09;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:16px;
+}
+.PlaceHolder
+{
+	color:#999;
+	background-color:#353535;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	font-size:16px;
+}

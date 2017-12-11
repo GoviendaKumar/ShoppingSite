@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+.Title
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color:white;
+}
+.Search
+{
+	color:white;
+	margin:0% 0% 0% 2%;
+	width:20%;
+}
+.price
+{
+	width:45%;background-color:#353535;color:white;
+}
+.go
+{
+	margin:0% 0% 0% 0%;
+	width:13%;
+	
+}
+.Searchfield
+{
+	width:60%;background-color:#353535;color:white;
+}
+.Searchtable
+{
+	border:#0F0 groove 3px;
+	
+}
+.InfoSearch
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:28px;
+	color:#6CF;
+	margin:3% 0% 0% 0%;
+}
+.pink
+{
+	color:#F39;
+	font-family:Times New Roman, serif;
+	font-weight:400;
+	font-size:18px;
+}
+.availibilty
+{
+	color:#0F0;
+	font-family:Times New Roman, serif;
+	font-weight:400;
+	font-size:18px;
+}
+.Notavailibilty
+{
+	color:red;
+	font-family:Times New Roman, serif;
+	font-weight:400;
+	font-size:18px;
+}
+.white
+{
+	color:white;
+	font-family:Times New Roman, serif;
+	font-weight:400;
+	font-size:14px;
+}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+.InfoSignIn
+{
+	text-align:right;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:20px;
+	color:#6CF;
+}
+.SignInbutton
+{
+	width:125px;height:31px;
+}
+.SignInformpurpose
+{
+	margin:3% 0% 0% 0%;
+}
+.leftmenu{
+	color:#FFF;
+margin:0% 0% 0% 12%;
+font-size:18px;
+font-family:Georgia, "Times New Roman", Times, serif;
+}
+.category
+{
+	color:#000;
+margin:0% 0% 0% 12%;
+font-size:18px;
+font-family:Georgia, "Times New Roman", Times, serif;
+}
+.butt_category
+{
+background-image:url(../images/buttonwhite.jpg);background-repeat:no-repeat;width:150px;height:32px;color:#BBBBBB;
+
+}

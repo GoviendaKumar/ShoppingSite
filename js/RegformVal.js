@@ -1,0 +1,389 @@
+// JavaScript Document
+count=0;
+function valid()
+{
+	
+	    //var DateTime=(Date().substring(4,24));
+		 var form=document.registeration;
+		// var fname=form.fname.value;
+		// var lname=form.lname.value;
+		// var okfn=okln=okpaddress=okcity=okmobile=okemail=okusername=okpassword=okCpassword=true;
+
+		 
+		// okfn=
+		testfname(form.fname.value);
+		 //okln=
+		 testlname(form.lname.value);
+		 //okpaddress=
+		 testpaddress(form.paddress.value);
+		// okcity=
+		 testcity(form.city.value);
+		 //okmobile=
+		 testmobile(form.mobile.value);
+		 //okemail=
+		 testemail(form.email.value);
+		// okusername=
+		 testusername(form.username.value);
+		// okpassword=
+		 testpassword(form.password.value,form.Cpassword.value);
+		// okCpassword=
+		// testCpassword(form.Cpassword.value);
+	    // alert(count);
+		 if(count!=8)//!okfn||!okln||!okpaddress||!okcity||!okmobile||!okemail||!okusername||!okpassword||!okCpassword)
+		 {
+			 count=0;
+			 return false;
+			 
+		  }
+		  else
+		  {
+			  form.submit();
+			  return true;
+		  }
+	//Conditions for First name	 
+		 function testfname(fn)
+		 {
+			 fn=Trim(fn);
+		 
+			 if(fn=="")
+		     {
+				   document.getElementById("error_fn").innerHTML="Please fill out this field";
+				   form.fname.focus();
+				  // return false;
+		     }
+		     else if(!validNames(fn))
+		     {
+			       document.getElementById("error_fn").innerHTML="Enter only first name";
+				    form.fname.focus();
+				   //return false;
+		     }
+		     else if(!isAlpha(fn))
+		     {
+			       document.getElementById("error_fn").innerHTML="Name contain only alpha values";
+				    form.fname.focus();
+				   //return false;
+		     }
+		     else if(fn.length>20||fn.length<3)
+		     {
+			       document.getElementById("error_fn").innerHTML="Please enter valid name";
+				    form.fname.focus();
+				   //return false;
+		     }
+		     else 
+		     {
+			       document.getElementById("error_fn").innerHTML="";
+				   count++;
+				   //return true;
+		     }
+		 }
+//Conditions for Last name
+		  function testlname(ln)
+	      {
+			  ln=Trim(ln);
+		      if(ln=="")
+		      {
+				  document.getElementById("error_ln").innerHTML="Please fill out this field";
+				  form.lname.focus();
+				  //return false;
+		      }
+		      else if(!validNames(ln))
+		      {
+				  document.getElementById("error_ln").innerHTML="Enter only last name";
+				   form.lname.focus();
+				  //return false;
+		      }
+		      else if(!isAlpha(ln))
+		      {
+				  document.getElementById("error_ln").innerHTML="Name contain only alpha values";
+				  form.lname.focus();
+				  //return false;
+		      }
+		      else if(ln.length>20||ln.length<3)
+		      {
+				  document.getElementById("error_ln").innerHTML="Please enter valid name";
+				  form.lname.focus();
+				  //return false;
+		      }
+		      else 
+		      {
+				  document.getElementById("error_ln").innerHTML="";
+				   count++;
+				//  return true;
+		      }
+		  }
+		  function testpaddress(pa)
+		  {
+			  pa=Trim(pa);
+		     if(pa=="")
+		     {
+			    document.getElementById("error_pa").innerHTML="Please fill out this field";
+				form.paddress.focus();
+				//return false;
+		     }
+		     else 
+		     {
+			       document.getElementById("error_pa").innerHTML="";
+				    count++;
+				  // return true;
+		     }
+		  }
+		  function testcity(city)
+		  {
+			  city=Trim(city);
+		      if(city=="")
+		      {
+			      document.getElementById("error_city").innerHTML="Please fill out this field";
+				  form.city.focus();
+				  //return false;
+		      }
+			  else if(!isAlpha(city))
+			  {
+				   document.getElementById("error_city").innerHTML="City name contains only alpha values";
+				   form.city.focus();
+				   //return false;
+			  }
+		      else 
+		      {
+			       document.getElementById("error_city").innerHTML="";
+				    count++;
+				   //return true;
+		      }
+		  }
+		  function testmobile(mobile)
+		  {
+			  mobile=Trim(mobile);
+		      if(mobile=="")
+		      {
+			      document.getElementById("error_mobile").innerHTML="Please fill out this field";
+				  form.mobile.focus();
+				  //return false;
+		      }
+			  else if(!isNumeric(mobile))
+			  {
+				   document.getElementById("error_mobile").innerHTML="Mobile number must be of numerics characters";
+				   form.mobile.focus();
+				   //return false;
+			  }
+		      else 
+		      {
+			       document.getElementById("error_mobile").innerHTML="";
+				    count++;
+				   //return true;
+		      }
+		  }
+		  function testemail(email)
+		  {
+			  email=Trim(email);
+			  if(email=="")
+		      {
+			      document.getElementById("error_email").innerHTML="Please fill out this field";
+				  form.email.focus();
+				    //return false;
+		      }
+			  
+			  else if(!findAtchar(email))
+			  {
+				document.getElementById("error_email").innerHTML="Invalid Email"; 
+				 form.email.focus();
+				 //return false; 
+			  }
+			  else if(email[0]=="@")
+			  {
+				 document.getElementById("error_email").innerHTML="Invalid Email";
+				  form.email.focus(); 
+				 //return false; 
+			  }
+			  else
+			  {
+				  document.getElementById("error_email").innerHTML=""; 
+				   count++;
+				  //return true;
+			  }
+		  }
+		  
+		  function testusername(un)
+		  {
+			  un=Trim(un);
+		      if(un=="")
+		      {
+			    document.getElementById("error_un").innerHTML="Please fill out this field";
+				 form.username.focus();
+				//return false;
+		      }
+			  else if(!NumericAlpha(un))
+			  {
+				   document.getElementById("error_un").innerHTML="Not allowed such characters \"+,-,#,$,%,\"etc.";
+				   form.username.focus();
+				   //return false;
+			  }
+		      else 
+		      {
+			       document.getElementById("error_un").innerHTML="";
+				    count++;
+				   //return true;
+		      }
+			  
+		  }
+		  function testpassword(pwd,Cpwd)
+		  {
+			 // var set_pwd=set_Cpwd=true;
+			  pwd=Trim(pwd);
+			   Cpwd=Trim(Cpwd);
+		      if(pwd=="")
+		      {
+			     document.getElementById("error_pwd").innerHTML="Please fill out this field";
+				 form.password.focus();
+			   // return false;
+		      }
+			  else if(pwd.length<8||pwd.length>16)
+			  {
+				   document.getElementById("error_pwd").innerHTML="Password length should be from 8 upto 16 characters";
+				   form.password.focus();
+				   //return false;
+			  }
+			  else if(!NumericAlpha(pwd))
+			  {
+				   document.getElementById("error_pwd").innerHTML="Not allowed such characters \"+,-,#,$,%,\"etc.";
+				   form.password.focus();
+				 // return false;
+			  }
+			  else if(pwd!=Cpwd)
+			  {
+				  //alert("HAMMAD");
+				  document.getElementById("error_Cpwd").innerHTML="Password and Confirm password doesn't matched";
+				  form.Cpassword.focus();
+				  
+				   document.getElementById("error_pwd").innerHTML="";
+				   // return false;
+			  }
+			  else 
+		      {
+			       document.getElementById("error_Cpwd").innerHTML="";
+				   document.getElementById("error_pwd").innerHTML="";
+				    count++;
+				//   return true;
+		      }
+			  if(Cpwd=="")
+		      {
+			     document.getElementById("error_Cpwd").innerHTML="Please fill out this field";
+				 form.Cpassword.focus();
+				// return false;
+		      }
+			  
+			  /*
+		      else 
+		      {
+			       document.getElementById("error_pwd").innerHTML="";
+				 //  set_correct=true;
+		      }
+			  */
+			 
+			  
+		  }
+		  /*
+		  function testCpassword(Cpwd)
+		  {
+			 //  pwd=Trim(pwd);
+			   Cpwd=Trim(Cpwd);
+			  if(Cpwd=="")
+		      {
+			     document.getElementById("error_Cpwd").innerHTML="Please fill out this field";
+				 form.Cpassword.focus();
+				 return false;
+		      }
+			  /*
+			  else if(pwd!=Cpwd)
+			  {
+				  document.getElementById("error_Cpwd").innerHTML="Password and Confirm password doesn't matched";
+				  form.Cpassword.focus();
+				  return false;
+			  }
+			  
+			  else
+			  {
+				  document.getElementById("error_Cpwd").innerHTML="";
+				   count++;
+				  return true;
+			  }
+		  }
+		  */
+}// end of valid() function
+	 function isAlpha(n)
+	 {
+		 var i;
+		 for(i=0;i<n.length;i++)
+		 {
+			 if(n[i]<"a"&&n[i]<"A"||n[i]>"z"&&n[i]>"Z")
+			 {
+				 return false;
+			 }
+			 
+		 }
+			 return true;
+	}
+	function findAtchar(email)
+	{
+		var i;
+		for(i=0;i<email.length;i++)
+		{
+			if(email[i]=="@")
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	 function isNumeric(n)
+	 {
+		 var i;
+		 for(i=0;i<n.length;i++)
+		 {
+			 if(n[i]<"0"||n[i]>"9")
+			 {
+				 return false;
+			 } 
+		 }
+		   return true;
+	}
+	function validNames(n)
+	{
+			 var i;
+		     for(i=0;i<n.length;i++)
+		     {
+			      if(n[i]==" ")
+			      {
+				      return false;
+			      }
+		     }
+		     return true;
+	 }
+	 function NumericAlpha(n)
+	 {
+		 
+		     n=n.toLowerCase(); 
+		 var i;
+		 for(i=0;i<n.length;i++)
+		 {
+			// if(n[i]<"a"&&n[i]<"A"&&n[i]<"0"||n[i]>"z"&&n[i]>"Z">n[i]>"9")
+			   var c=n.charCodeAt(i);
+			    
+			 if((c<97||c>122)&&(c<48||c>57))
+			 {
+				 return false;
+			 }
+		 }
+		 return true;
+	 }
+	 function Trim(s)
+     { 
+
+        while (s.substring(0,1)==' ') // check for white spaces from beginning
+        {
+            s = s.substring(1,s.length);
+        }
+        while(s.substring(s.length-1,s.length)==' ') // check white space from end
+        {
+           s = s.substring(0,s.length-1);
+        }
+        return s;
+    }

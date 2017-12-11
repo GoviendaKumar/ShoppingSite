@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+.congrats
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:28px;
+	color:#6CF;
+	margin:3% 0% 0% 0%;
+	text-align:left;
+}
+.congratsMsg
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:20px;
+	color:#0F0;
+	text-align:left;
+}
+.Welcome
+{
+	
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:26px;
+	color:#F39;
+	margin:3% 0% 0% 0%;
+}
+.WelcomeMsg
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:20px;
+	color:#0F0;
+}
